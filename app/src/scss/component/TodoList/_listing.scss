@@ -64,6 +64,8 @@
   cursor: pointer;
   position: relative;
   transition: all 0.25s ease-in-out;
+  margin-bottom: 0;
+  appearance: none;
 }
 
 .todo-listing__item-delete {

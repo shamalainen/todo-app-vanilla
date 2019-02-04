@@ -17,7 +17,10 @@
   </head>
   <body>
     <div class="todo-list">
-      <form class="todo-form container container--inset">
+      <form
+        onsubmit="return onFormSubmit(event);"
+        class="todo-form container container--inset"
+      >
         <label htmlFor="task-name" class="todo-form__label">
           <h2 class="todo-form__heading">
             What're you trying to achieve?
@@ -34,6 +37,7 @@
           <i class="fas fa-plus"></i>
         </button>
       </form>
+      <ul class="todo-listing js-todo-listing container"></ul>
     </div>
     <script src="./assets/js/scripts.min.js"></script>
   </body>

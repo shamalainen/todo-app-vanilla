@@ -7,9 +7,34 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
-    <title>Dev Boilerplate</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <title>Todo App</title>
   </head>
   <body>
+    <div class="todo-list">
+      <form class="todo-form container container--inset">
+        <label htmlFor="task-name" class="todo-form__label">
+          <h2 class="todo-form__heading">
+            What're you trying to achieve?
+          </h2>
+          <input
+            type="text"
+            name="taskName"
+            id="taskName"
+            class="todo-form__input"
+            placeholder="Tell me your plans!"
+          />
+        </label>
+        <button type="submit" class="btn todo-form__button">
+          <i class="fas fa-plus"></i>
+        </button>
+      </form>
+    </div>
     <script src="./assets/js/scripts.min.js"></script>
   </body>
 </html>

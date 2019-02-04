@@ -1,0 +1,73 @@
+.btn {
+  font-family: inherit;
+  font-weight: 400;
+  cursor: pointer;
+  letter-spacing: normal;
+  display: table;
+  line-height: 1.2em;
+  height: auto;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  transition: all 0.25s ease;
+  -webkit-appearance: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2em;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  @media screen and (min-width: $medium) {
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, 0.1);
+  }
+}
+
+.btn--big {
+  padding: 1rem 1.5rem;
+}
+
+.btn--big-text {
+  @include font-size(16px);
+
+  @media screen and (min-width: $medium) {
+    @include font-size(20px);
+  }
+}
+
+.btn--outline {
+  border-color: currentColor;
+}
+
+.btn--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn--right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.btn--crimson {
+  color: $white;
+  background-color: $crimson;
+  border-color: $crimson;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.btn--crimson-outline {
+  border-color: $crimson;
+
+  &:hover {
+    color: $white;
+    background-color: $crimson;
+  }
+}

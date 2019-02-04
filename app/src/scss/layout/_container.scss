@@ -1,0 +1,10 @@
+.container {
+  max-width: $container;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container--inset {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}

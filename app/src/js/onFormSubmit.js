@@ -2,13 +2,13 @@ let elementCount = 0;
 
 const onFormSubmit = (e) => {
   e.preventDefault();
-  elementCount++;
-
   const taskName = e.target.taskName;
 
   if (taskName.value === '') {
     setInputError(taskName);
     return;
+  } else {
+    elementCount++;
   }
 
   setInputError(taskName, false);
@@ -52,3 +52,6 @@ const setInputError = (input, error = true) => {
     currentInput.placeholder = "Please don't leave me empty!";
   }
 };
+
+const listItemCheckboxes = document.querySelectorAll('.todo-listing__item');
+// [...listItemCheckboxes].map((i, index) => console.log(i, index));

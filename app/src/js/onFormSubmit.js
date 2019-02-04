@@ -52,6 +52,3 @@ const setInputError = (input, error = true) => {
     currentInput.placeholder = "Please don't leave me empty!";
   }
 };
-
-const listItemCheckboxes = document.querySelectorAll('.todo-listing__item');
-// [...listItemCheckboxes].map((i, index) => console.log(i, index));

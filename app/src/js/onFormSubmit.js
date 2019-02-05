@@ -2,7 +2,7 @@ let elementCount = 0;
 
 const onFormSubmit = (e) => {
   e.preventDefault();
-  const taskName = e.target.taskName;
+  const { taskName } = e.target;
 
   if (taskName.value === '') {
     setInputError(taskName);
@@ -21,6 +21,7 @@ const onFormSubmit = (e) => {
   const listItemDeleteButton = document.createElement('i');
 
   listItemDelete.setAttribute('class', 'btn todo-listing__item-delete');
+  listItemDelete.setAttribute('onclick', "handleDelete(\"todo-item--" + elementCount + "\");");
   listItemDeleteButton.setAttribute('class', 'fas fa-trash');
   listItemDelete.appendChild(listItemDeleteButton);
 
@@ -52,3 +53,7 @@ const setInputError = (input, error = true) => {
     currentInput.placeholder = "Please don't leave me empty!";
   }
 };
+
+const handleDelete = (id) => {
+  document.getElementById(id).remove();
+}

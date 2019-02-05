@@ -30,6 +30,9 @@ const onFormSubmit = (e) => {
 
   listItemCheckbox.setAttribute('type', 'checkbox');
   listItemCheckbox.setAttribute('class', 'todo-listing__item-checkbox');
+  listItemCheckbox.setAttribute('onclick', "handleUpdateStatus(event)");
+  
+  const listItemCheckboxParent = listItemCheckbox.parentNode;
 
   listItem.setAttribute('id', 'todo-item--' + elementCount);
   listItem.setAttribute('class', 'todo-listing__item');
@@ -38,7 +41,7 @@ const onFormSubmit = (e) => {
   listItem.appendChild(listItemDelete);
   
   listParent.appendChild(listItem);
-
+  
   taskName.value = '';
 };
 
@@ -54,6 +57,13 @@ const setInputError = (input, error = true) => {
   }
 };
 
-const handleDelete = (id) => {
+const handleDelete = id => {
   document.getElementById(id).remove();
-}
+};
+
+const handleUpdateStatus = e => {
+  const element = e.target;
+  const elementParent = element.parentNode;
+
+  elementParent.classList.toggle('is-active');
+};

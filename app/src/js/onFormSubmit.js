@@ -21,7 +21,7 @@ const onFormSubmit = (e) => {
   const listItemDeleteButton = document.createElement('i');
 
   listItemDelete.setAttribute('class', 'btn todo-listing__item-delete');
-  listItemDelete.setAttribute('onclick', "handleDelete(\"todo-item--" + elementCount + "\");");
+  listItemDelete.setAttribute('onclick', `handleDelete("todo-item--${elementCount}");`);
   listItemDeleteButton.setAttribute('class', 'fas fa-trash');
   listItemDelete.appendChild(listItemDeleteButton);
 
@@ -34,7 +34,7 @@ const onFormSubmit = (e) => {
   
   const listItemCheckboxParent = listItemCheckbox.parentNode;
 
-  listItem.setAttribute('id', 'todo-item--' + elementCount);
+  listItem.setAttribute('id', `todo-item--${elementCount}`);
   listItem.setAttribute('class', 'todo-listing__item');
   listItem.appendChild(listItemCheckbox);
   listItem.appendChild(listItemTask);
